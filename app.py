@@ -41,8 +41,8 @@ def lichte_staander(Ned_kN: float, hoogte_m: float):
 # Streamlit interface
 st.title("Lichtste veilige kolom (zonder knikverkorter)")
 
-Ned_kN = st.number_input("Verticale belasting per kolom (kN)", min_value=10.0, max_value=3000.0, value=400.0, step=10.0)
-hoogte_m = st.number_input("Kolomhoogte (m)", min_value=2.0, max_value=12.0, value=5.0, step=0.1)
+Ned_kN = st.number_input("Verticale belasting per kolom (kN)", min_value=10.0, max_value=25000.0, value=400.0, step=10.0)
+hoogte_m = st.number_input("Kolomhoogte (m)", min_value=2.0, max_value=20.0, value=5.0, step=0.1)
 
 if st.button("Bepaal lichtste profiel"):
     resultaat = lichte_staander(Ned_kN, hoogte_m)
